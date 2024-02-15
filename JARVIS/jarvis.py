@@ -58,13 +58,13 @@ def sendEmail(to, content):
     server = smtplib.SMTP('smtp.gmail.com', 587) #here 587 is port no
     server.ehlo()
     server.starttls()
-    server.login('murghendraakki10@gmail.com', 'your-password')#put your gmail username and password
-    server.sendmail('murghendraakki10@gmail.com', to, content)
+    server.login('', 'your-password')#put your gmail username and password
+    server.sendmail('', to, content)
     server.close()
     
 def getWeather(city):
-    api_key = '1bbf1fb279f6f158aac4df7379066d3b'
-    base_url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}'
+    api_key = ''
+    base_url = f'{city}&appid={api_key}'
 
     try:
         response = requests.get(base_url)
@@ -160,7 +160,7 @@ if __name__ == "__main__":
               
 
         elif 'play music' in query:
-            music_dir = 'D:\\Non Critical\\songs\\Favorite Songs2'
+            music_dir = 'D:\\Non Critical\\songs\\'
             songs = os.listdir(music_dir)
             print(songs)    
             os.startfile(os.path.join(music_dir, songs[0]))
