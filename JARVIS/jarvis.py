@@ -58,8 +58,8 @@ def sendEmail(to, content):
     server = smtplib.SMTP('smtp.gmail.com', 587) #here 587 is port no
     server.ehlo()
     server.starttls()
-    server.login('', 'your-password')#put your gmail username and password
-    server.sendmail('', to, content)
+    server.login('your_mail', 'your-password')#put your gmail username and password
+    server.sendmail('your_mail', to, content)
     server.close()
     
 def getWeather(city):
