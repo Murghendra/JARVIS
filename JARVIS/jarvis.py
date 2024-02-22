@@ -179,7 +179,7 @@ if __name__ == "__main__":
             os.startfile(codePath)
 
 
-        elif 'email to Murghendra' in query:
+        elif 'email to John doe' in query:
             try:
                 speak("What should I say?")
                 content = takeCommand()
