@@ -64,7 +64,7 @@ def sendEmail(to, content):
     
 def getWeather(city):
     api_key = ''
-    base_url = f'{city}&appid={api_key}'
+    base_url = f'{city}&appid={api_key}' //place your API key of open weather
 
     try:
         response = requests.get(base_url)
